@@ -208,13 +208,6 @@ html {
   clear: both;
 }
 
-#header, #footer,
-#sidebar-first,
-#sidebar-second,
-#navigation {
-  background: rgba(170, 170, 170, 0.2);
-}
-
 #header,
 #footer,
 .mission,
