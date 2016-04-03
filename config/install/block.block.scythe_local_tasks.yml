@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - basic
-id: basic_local_tasks
-theme: basic
+    - scythe
+id: scythe_local_tasks
+theme: scythe
 region: content
 weight: -40
 provider: null

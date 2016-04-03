@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - basic
-id: basic_help
-theme: basic
+    - scythe
+id: scythe_help
+theme: scythe
 region: content
 weight: -30
 provider: null

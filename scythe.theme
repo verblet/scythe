@@ -10,7 +10,7 @@ use Drupal\Core\Cache\CacheableMetadata;
 /**
  * Prepares variables for the html.html.twig template.
  */
-function basic_preprocess_html(&$variables) {
+function scythe_preprocess_html(&$variables) {
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }

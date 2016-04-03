@@ -1,6 +1,6 @@
-basic.settings:
+scythe.settings:
   type: theme_settings
-  label: 'Basic theme settings'
+  label: 'Scythe theme settings'
   mapping:
     browser_sync:
       type: mapping

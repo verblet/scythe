@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - basic
-id: basic_content
-theme: basic
+    - scythe
+id: scythe_content
+theme: scythe
 region: content
 weight: 0
 provider: null

@@ -4,16 +4,16 @@ dependencies:
   module:
     - system
   theme:
-    - basic
-id: basic_breadcrumbs
-theme: basic
-region: breadcrumb
+    - scythe
+id: scythe_messages
+theme: scythe
+region: highlighted
 weight: 0
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_messages_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_messages_block
+  label: 'Status messages'
   provider: system
   label_display: '0'
 visibility: {  }

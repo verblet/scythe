@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - basic
-id: basic_footer
-theme: basic
+    - scythe
+id: scythe_footer
+theme: scythe
 region: footer
 weight: 0
 provider: null

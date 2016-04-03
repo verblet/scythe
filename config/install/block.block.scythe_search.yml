@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - basic
-id: basic_search
-theme: basic
+    - scythe
+id: scythe_search
+theme: scythe
 region: sidebar_first
 weight: -1
 provider: null
