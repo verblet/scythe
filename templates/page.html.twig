@@ -6,59 +6,51 @@
   secondary_menu ? 'with-subnav'
 ) }}>
 
-  <!-- ______________________ HEADER _______________________ -->
-
-  <header id="header">
+  <header>
     <div class="container">
-      {% if logo %}
-        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
-          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-        </a>
-      {% endif %}
+    {% if logo %}
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
+        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+      </a>
+    {% endif %}
 
-      {% if site_name or site_slogan %}
-        {% if site_name %}
-          {% if title %}
-            <div id="site-name">
-              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{  site_name }}</a>
-            </div>
-          {% else %}{# Use h1 when the content title is empty #}
-            <h1 id="site-name">
-              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{  site_name }}</a>
-            </h1>
-          {% endif %}
-        {% endif %}
-
-        {% if site_slogan %}
-          <div id="site-slogan">{{ site_slogan }}</div>
+    {% if site_name or site_slogan %}
+      {% if site_name %}
+        {% if title %}
+          <div id="site-name">
+            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{  site_name }}</a>
+          </div>
+        {% else %}{# Use h1 when the content title is empty #}
+          <h1 id="site-name">
+            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{  site_name }}</a>
+          </h1>
         {% endif %}
       {% endif %}
 
-      {% if page.header %}
-        <div id="header-region">
-          {{ page.header }}
+      {% if site_slogan %}
+        <p>{{ site_slogan }}</p>
+      {% endif %}
+    {% endif %}
+
+    {% if page.header %}
+      {{ page.header }}
+      {% endif %}
+
+    {% if main_menu or secondary_menu %}
+      <nav>
+        <div class="container">
+          {{ main_menu }}
+          {{ secondary_menu }}
         </div>
-      {% endif %}
+      </nav><!-- /#navigation -->
+    {% endif %}
     </div>
   </header><!-- /#header -->
 
-  {% if main_menu or secondary_menu %}
-    <nav id="navigation" class="menu{% if main_menu %} with-primary{% endif %}{% if secondary_menu %} with-secondary{% endif %}">
-      <div class="container">
-        {{ main_menu }}
-        {{ secondary_menu }}
-      </div>
-    </nav><!-- /#navigation -->
-  {% endif %}
 
-  <!-- ______________________ MAIN _______________________ -->
-
-  <div id="main">
+  <section>
     <div class="container">
       <section id="content">
-
-        <div id="content-header">
-
           {{ page.breadcrumb }}
 
           {% if page.highlighted|render %}
@@ -81,33 +73,20 @@
           {% if action_links %}
             <ul class="action-links">{{ action_links }}</ul>
           {% endif %}
-
-        </div><!-- /#content-header -->
-
-        <div id="content-area">
           {{ page.content }}
-        </div>
 
       </section><!-- /#content -->
 
-      {% if page.sidebar_first|render %}
-        <aside id="sidebar-first" class="column sidebar first">
-          {{ page.sidebar_first }}
-        </aside><!-- /#sidebar-first -->
-      {% endif %}
-
       {% if page.sidebar_second|render %}
-        <aside id="sidebar-second" class="column sidebar second">
+        <aside>
           {{ page.sidebar_second }}
         </aside><!-- /#sidebar-second -->
       {% endif %}
     </div><!-- /.container -->
   </div><!-- /#main -->
 
-  <!-- ______________________ FOOTER _______________________ -->
-
   {% if page.footer|render %}
-    <footer id="footer">
+    <footer>
       <div class="container">
         {{ page.footer }}
       </div>
