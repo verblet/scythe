@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+SC|Neuton:400italic,300);
+
 
 html {
   box-sizing: border-box;
@@ -6,6 +6,14 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a:after {
+  content: '';
 }
 
 /*# sourceMappingURL=theme.css.map */

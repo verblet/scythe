@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+SC|Neuton:400italic,300);
+
 html {
   box-sizing: border-box;
 }
@@ -14,7 +16,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: monospace;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -63,7 +65,7 @@ label {
 input,
 select {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: monospace;
   font-size: 16px;
 }
 
@@ -74,7 +76,7 @@ select[multiple] {
   border-radius: 2px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: monospace;
   font-size: 16px;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -185,7 +187,7 @@ th {
 body {
   color: #f4f4f4;
   background-color: #111;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: 'Neuton', serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -197,38 +199,53 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.3;
+  font-family: 'Alegreya SC', serif;
+  font-size: 1em;
+  line-height: 1.5;
   margin: 1em 0 0.5em;
+  position: relative;
+  display: inline-block;
 }
 
-h1 {
-  font-size: 1.5em;
+h1:after,
+h2:after,
+h3:after {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  overflow: hidden;
+  padding-left: 0.5em;
 }
 
-h2 {
-  font-size: 1.25em;
+h1:after {
+  content: "\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217\2217";
 }
 
-h3 {
-  font-size: 1.15em;
+h2:after {
+  content: "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 }
 
-
+h3:after {
+  content: "-------------------------------------------------------------------------------";
+}
 
 p {
   margin: 0 0 0.75em;
 }
 
 a {
-  color: firebrick;
+  color: crimson;
   text-decoration: underline;
   transition: color 150ms ease;
 }
 
+a:after {
+  content: "\219D";
+  padding-left: 0.15em;
+}
+
 a:active, a:focus, a:hover {
-  color: crimson;
+  color: firebrick;
 }
 
 hr {
